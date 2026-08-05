@@ -1,0 +1,117 @@
+.ribbon-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.ribbon-tabs {
+  display: flex;
+  color: white;
+  padding-top: 4px;
+  padding-left: 8px;
+}
+
+.ribbon-tab {
+  padding: 6px 16px;
+  font-size: 13px;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 4px 4px 0 0;
+  transition: background-color 0.2s;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.ribbon-tab:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.ribbon-tab.active {
+  background-color: var(--ms-gray-10);
+  color: var(--ms-gray-100);
+  font-weight: 500;
+}
+
+@media (prefers-color-scheme: dark) {
+  .ribbon-tab.active {
+    background-color: var(--ms-gray-100);
+    color: white;
+  }
+}
+
+.ribbon-toolbar-content {
+  display: flex;
+  gap: 16px;
+  padding: 8px 16px;
+  background-color: var(--ms-gray-10);
+  border-bottom: 1px solid var(--border-color);
+  min-height: 52px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .ribbon-toolbar-content {
+    background-color: var(--ms-gray-100);
+  }
+}
+
+.ribbon-menu-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ribbon-tool-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 11px;
+  color: var(--text-color);
+}
+
+.ribbon-tool-btn:hover {
+  background-color: var(--ms-gray-20);
+  border-color: var(--border-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  .ribbon-tool-btn:hover {
+    background-color: var(--ms-gray-90);
+  }
+}
+
+.ribbon-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  min-width: 150px;
+  z-index: 50;
+  padding: 4px 0;
+}
+
+.dropdown-item {
+  padding: 8px 16px;
+  font-size: 12px;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.dropdown-item:hover {
+  background-color: var(--ms-gray-20);
+}
+
+@media (prefers-color-scheme: dark) {
+  .dropdown-item:hover {
+    background-color: var(--ms-gray-90);
+  }
+}

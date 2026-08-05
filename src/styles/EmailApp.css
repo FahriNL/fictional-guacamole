@@ -1,0 +1,191 @@
+.email-app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--panel-bg);
+}
+
+.email-content-area {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Nav Pane */
+.email-nav-pane {
+  width: 180px;
+  border-right: 1px solid var(--border-color);
+  background-color: var(--ms-gray-10);
+  padding-top: 8px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .email-nav-pane {
+    background-color: #201F1E;
+  }
+}
+
+.nav-item {
+  padding: 8px 16px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.nav-item:hover {
+  background-color: var(--ms-gray-20);
+}
+
+.nav-item.active {
+  background-color: var(--ms-gray-30);
+  font-weight: 500;
+  border-left: 3px solid var(--ms-outlook-blue);
+}
+
+@media (prefers-color-scheme: dark) {
+  .nav-item:hover { background-color: var(--ms-gray-90); }
+  .nav-item.active { background-color: var(--ms-gray-100); }
+}
+
+/* Inbox List */
+.email-list {
+  width: 320px;
+  border-right: 1px solid var(--border-color);
+  overflow-y: auto;
+  background-color: var(--panel-bg);
+}
+
+.list-header {
+  padding: 12px 16px;
+  font-weight: 600;
+  font-size: 14px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.email-item {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-color);
+  cursor: pointer;
+  border-left: 3px solid transparent;
+}
+
+.email-item:hover {
+  background-color: var(--ms-gray-10);
+}
+
+.email-item.selected {
+  background-color: #E3F2FD; /* Light outlook blue */
+  border-left: 3px solid var(--ms-outlook-blue);
+}
+
+@media (prefers-color-scheme: dark) {
+  .email-item:hover { background-color: var(--ms-gray-90); }
+  .email-item.selected {
+    background-color: #004578;
+  }
+}
+
+.sender-name {
+  font-weight: 600;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.email-subject {
+  font-size: 13px;
+  color: var(--ms-blue);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 4px;
+}
+
+.email-preview {
+  font-size: 12px;
+  color: #605E5C;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (prefers-color-scheme: dark) {
+  .email-preview { color: #A19F9D; }
+}
+
+/* Reading Pane */
+.reading-pane {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+  background-color: var(--panel-bg);
+}
+
+.empty-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--border-color);
+  font-size: 14px;
+}
+
+.email-header {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.avatar {
+  color: var(--border-color);
+  background-color: var(--ms-gray-20);
+  border-radius: 50%;
+  padding: 4px;
+}
+
+.email-meta {
+  flex: 1;
+}
+
+.email-meta h2 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.email-sender-line {
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.email-date {
+  font-size: 12px;
+  color: #605E5C;
+}
+
+@media (prefers-color-scheme: dark) {
+  .email-date { color: #A19F9D; }
+}
+
+.email-body {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.financial-impact {
+  margin-top: 24px;
+  padding: 12px;
+  background-color: var(--ms-gray-10);
+  border-left: 4px solid var(--ms-outlook-blue);
+  font-size: 13px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .financial-impact {
+    background-color: var(--ms-gray-100);
+  }
+}

@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  /* Microsoft-esque Color Palette */
+  --ms-blue: #0078D4;
+  --ms-blue-hover: #106EBE;
+  --ms-gray-10: #FAF9F8;
+  --ms-gray-20: #F3F2F1;
+  --ms-gray-30: #EDEBE9;
+  --ms-gray-40: #E1DFDD;
+  --ms-gray-90: #323130;
+  --ms-gray-100: #201F1E;
+  --ms-white: #FFFFFF;
+  --ms-black: #000000;
+  
+  --ms-excel-green: #217346;
+  --ms-word-blue: #2B579A;
+  --ms-outlook-blue: #0072C6;
+
+  --bg-color: var(--ms-gray-20);
+  --text-color: var(--ms-gray-100);
+  --panel-bg: var(--ms-white);
+  --border-color: var(--ms-gray-40);
+  
+  /* Acrylic/Glassmorphism subtle effect */
+  --acrylic-bg: rgba(255, 255, 255, 0.7);
+  --acrylic-backdrop: blur(10px);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #11100F;
+    --text-color: var(--ms-gray-10);
+    --panel-bg: #252423;
+    --border-color: #3B3A39;
+    --acrylic-bg: rgba(37, 36, 35, 0.7);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', 'Inter', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  overflow: hidden; /* Prevent scrolling on desktop/app feel */
+}
+
+/* Common UI Components */
+.ms-button {
+  background-color: var(--ms-blue);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ms-button:hover {
+  background-color: var(--ms-blue-hover);
+}
+
+.ms-button.secondary {
+  background-color: transparent;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+.ms-button.secondary:hover {
+  background-color: var(--ms-gray-30);
+}
+
+.ms-panel {
+  background-color: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.acrylic {
+  background: var(--acrylic-bg);
+  backdrop-filter: var(--acrylic-backdrop);
+  -webkit-backdrop-filter: var(--acrylic-backdrop);
+}
